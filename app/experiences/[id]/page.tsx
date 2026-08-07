@@ -9,6 +9,7 @@ const experiences = [
         category: "도보 투어",
         duration: "3시간",
         capacity: "최대 10명",
+        maxPeople: 10,
         price: 45000,
         description:
             "현지 가이드와 함께 삿포로의 대표 명소를 걸으며 도시의 역사와 문화를 체험하는 투어입니다.",
@@ -21,6 +22,7 @@ const experiences = [
         category: "근교 투어",
         duration: "4시간",
         capacity: "최대 8명",
+        maxPeople: 8,
         price: 55000,
         description:
             "오타루 운하와 레트로 거리를 따라 걸으며 홋카이도의 감성적인 분위기를 즐기는 투어입니다.",
@@ -33,6 +35,7 @@ const experiences = [
         category: "미식 투어",
         duration: "3.5시간",
         capacity: "최대 8명",
+        maxPeople: 8,
         price: 65000,
         description:
             "현지인이 추천하는 맛집을 방문하며 홋카이도의 다양한 음식을 즐기는 미식 체험입니다.",
@@ -112,7 +115,10 @@ export default async function ExperienceDetailPage({
                     </section>
                 </article>
 
-                <ReservationForm price={experience.price} />
+                <ReservationForm 
+                    price={experience.price} 
+                    maxPeople={experience.maxPeople}
+                    />
             </section>
         </main>
     );

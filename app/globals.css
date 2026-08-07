@@ -444,3 +444,13 @@ main {
 .reservation-card button:hover {
   background: var(--primary-dark);
 }
+
+.form-message {
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #eff6ff;
+  color: var(--primary);
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
