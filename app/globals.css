@@ -206,6 +206,14 @@ main {
   .detail-meta-grid {
     grid-template-columns: 1fr;
   }
+
+    .signup-type-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-type-card .primary-link {
+    width: 100%;
+  }
 }
 
 .page-header {
@@ -453,4 +461,44 @@ main {
   border-radius: 12px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+.signup-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.signup-type-card {
+  padding: 26px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+}
+
+.signup-type-card span {
+  display: inline-flex;
+  padding: 6px 12px;
+  background: #eff6ff;
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.signup-type-card h2 {
+  margin-top: 16px;
+  font-size: 24px;
+}
+
+.signup-type-card p {
+  margin-top: 10px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.signup-type-card .primary-link {
+  margin-top: 22px;
 }
