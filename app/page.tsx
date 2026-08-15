@@ -28,11 +28,6 @@ export default function Home() {
       <section className="hero">
         <div className="hero-top">
           <p className="eyebrow">Sapporo Experience Platform</p>
-
-          <div className="hero-links">
-            <Link href="/login">로그인</Link>
-            <Link href="/signup">회원가입</Link>
-          </div>
         </div>
 
         <h1>ReserveFlow</h1>

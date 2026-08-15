@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BussinessSignupPage() {
+export default function BusinessSignupPage() {
     return (
         <main>
             <section className="page-header">
@@ -75,17 +75,17 @@ export default function BussinessSignupPage() {
                 <div>
                     <label htmlFor="bussinss-number">사업자 등록번호</label>
                     <input
-                        id="bussiness-number"
-                        type = "text"
+                        id="business-number"
+                        type="text"
                         placeholder="예: 123-45-6789"
                     />
                 </div>
 
-                <label htmlFor="bussiness-license">사업자 등록증</label>
+                <label htmlFor="business-license">사업자 등록증</label>
                 <input
-                id = "bussiness-license"
-                type="file"
-                accept="image/*, pdf"
+                    id="business-license"
+                    type="file"
+                    accept="image/*, pdf"
                 />
 
                 <p className="helper-text">

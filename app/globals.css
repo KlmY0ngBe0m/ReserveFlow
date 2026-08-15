@@ -233,6 +233,19 @@ main {
     flex: 1;
     text-align: center;
   }
+
+  .dashboard-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-section-header button {
+    width: 100%;
+  }
 }
 
 .page-header {
@@ -700,4 +713,119 @@ main {
 .site-nav .nav-cta:hover {
   background: var(--primary-dark);
   color: #ffffff;
+}
+
+.dashboard-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.dashboard-card,
+.dashboard-table-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+}
+
+.dashboard-card {
+  padding: 22px;
+}
+
+.dashboard-card span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.dashboard-card strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.dashboard-table-card {
+  margin-top: 20px;
+  padding: 24px;
+}
+
+.dashboard-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dashboard-section-header h2 {
+  margin-top: 6px;
+  font-size: 24px;
+}
+
+.dashboard-section-header button,
+.table-actions button {
+  padding: 9px 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reservation-table {
+  margin-top: 18px;
+  overflow-x: auto;
+}
+
+.reservation-table-head,
+.reservation-table-row {
+  display: grid;
+  grid-template-columns: 90px 1.4fr 90px 150px 70px 90px 130px;
+  gap: 12px;
+  align-items: center;
+  min-width: 860px;
+  padding: 14px;
+}
+
+.reservation-table-head {
+  background: #f8fafc;
+  color: var(--muted);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.reservation-table-row {
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 14px;
+}
+
+.status-badge {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.status-badge.pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.status-badge.confirmed {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-actions .danger-button {
+  background: #fee2e2;
+  color: #b91c1c;
 }
