@@ -1,3 +1,5 @@
+import BusinessReservationTable from "@/app/components/BusinessReservationTable";
+
 const reservations = [
     {
         id: "RSV-001",
@@ -71,46 +73,8 @@ export default function BusinessDashboardPage() {
                     <button type="button">체험 상품 등록</button>
                 </div>
 
-                <div className="reservation-table">
-                    <div className="reservation-table-head">
-                        <span>예약번호</span>
-                        <span>체험명</span>
-                        <span>고객명</span>
-                        <span>예약일시</span>
-                        <span>인원</span>
-                        <span>상태</span>
-                        <span>관리</span>
-                    </div>
-
-                    {reservations.map((reservation) => (
-                        <div className="reservation-table-row" key={reservation.id}>
-                            <span>{reservation.id}</span>
-                            <span>{reservation.experienceTitle}</span>
-                            <span>{reservation.customerName}</span>
-                            <span>
-                                {reservation.date} {reservation.time}
-                            </span>
-                            <span>{reservation.peopleCount}명</span>
-                            <span>
-                                <strong
-                                    className={
-                                        reservation.status === "확정"
-                                            ? "status-badge confirmed"
-                                            : "status-badge pending"
-                                    }
-                                >
-                                    {reservation.status}
-                                </strong>
-                            </span>
-                            <span className="table-actions">
-                                <button type="button">승인</button>
-                                <button type="button" className="danger-button">
-                                    취소
-                                </button>
-                            </span>
-                        </div>
-                    ))}
-                </div>
+                <BusinessReservationTable />
+                
             </section>
         </main>
     );

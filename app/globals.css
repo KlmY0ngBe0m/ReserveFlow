@@ -829,3 +829,13 @@ main {
   background: #fee2e2;
   color: #b91c1c;
 }
+
+.status-badge.cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.table-actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
